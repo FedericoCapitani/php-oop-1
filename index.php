@@ -32,11 +32,11 @@ $profit_alien = $alien->getProfit();
 $profit_matrix = $matrix->getProfit();
 
 
-var_dump($alien);
-var_dump($matrix);
+// var_dump($alien);
+// var_dump($matrix);
 
-var_dump($profit_alien);
-var_dump($profit_matrix);
+// var_dump($profit_alien);
+// var_dump($profit_matrix);
 ?>
 
 <!DOCTYPE html>
@@ -46,8 +46,37 @@ var_dump($profit_matrix);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OOP-1</title>
+    <style>
+        .container{
+            display: flex;
+            column-gap: 2rem;
+        }
+        .card{
+            border: 1px solid black;
+            padding: 1rem;
+        }
+    </style>
 </head>
 <body>
     
+    <h1>Movies</h1>
+
+    <div class="container">
+        <div class="card">
+            <p>Nome: <?php echo $alien->name ?></p>
+            <p>Durata: <?php echo $alien->length ?></p>
+            <p>Anno di rilascio: <?php echo $alien->release_year ?></p>
+            <p>Budget: <?php echo $alien->budget ?>€ mln</p>
+            <p>Guadagno: <?php echo $profit_alien ?>€ mln</p>
+        </div>
+        <div class="card">
+            <p>Nome: <?php echo $matrix->name ?></p>
+            <p>Durata: <?php echo $matrix->length ?></p>
+            <p>Anno di rilascio: <?php echo $matrix->release_year ?></p>
+            <p>Budget: <?php echo $matrix->budget ?>€ mln</p>
+            <p>Guadagno: <?php echo $profit_matrix ?>€ mln</p>
+        </div>
+    </div>
+
 </body>
 </html>
